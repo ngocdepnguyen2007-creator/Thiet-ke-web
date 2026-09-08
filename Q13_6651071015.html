@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đăng ký du lịch</title>
+</head>
+<body>
+<form id="form1">
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <td>Họ và tên</td>
+        <td>
+            <input type="text" id="txtHoTen" size="30">
+        </td>
+    </tr>
+    <tr>
+        <td>Địa chỉ</td>
+        <td>
+            <input type="text" id="txtDiaChi" size="30">
+        </td>
+    </tr>
+    <tr>
+        <td>Điện thoại</td>
+        <td>
+            <input type="text" id="txtDienThoai" size="20">
+        </td>
+    </tr>
+    <tr>
+        <td>Khách Việt Nam</td>
+        <td>
+            <input type="checkbox" id="chkVietNam" checked>
+        </td>
+    </tr>
+    <tr>
+        <td>Chọn tour</td>
+        <td>
+            <select id="tour">
+                <optgroup label="Miền Bắc">
+                    <option value="Hà Nội - Hạ Long - Sa Pa">
+                        Hà Nội - Hạ Long - Sa Pa
+                    </option>
+                    <option value="Hạ Long - Ninh Bình">
+                        Hạ Long - Ninh Bình
+                    </option>
+                </optgroup>
+                <optgroup label="Miền Trung">
+                    <option value="Huế - Đà Nẵng - Hội An">
+                        Huế - Đà Nẵng - Hội An
+                    </option>
+                    <option value="Huế - Đà Nẵng - Nha Trang">
+                        Huế - Đà Nẵng - Nha Trang
+                    </option>
+                </optgroup>
+                <optgroup label="Miền Nam">
+                    <option value="TP.HCM - Cần Thơ - Cà Mau">
+                        TP.HCM - Cần Thơ - Cà Mau
+                    </option>
+                    <option value="TP.HCM - Mỹ Tho">
+                        TP.HCM - Mỹ Tho
+                    </option>
+                </optgroup>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Phương tiện</td>
+        <td>
+            <input type="radio" name="phuongTien"
+                   value="Máy bay" checked>
+            Máy bay
+            <input type="radio" name="phuongTien"
+                   value="Xe ô tô">
+            Xe ô tô
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <fieldset style="width:350px; height:55px;">
+                <legend> Số lượng hành khách </legend>
+                Người lớn:
+                <input type="text" id="txtNguoiLon" size="5">
+                Trẻ em:
+                <input type="text" id="txtTreEm" size="5">
+            </fieldset>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>Ghi chú</td>
+        <td>
+            <textarea id="txtGhiChu" rows="3" cols="30">
+Ngày 20/08/2015, có 2 người lớn, 1 trẻ em
+            </textarea>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="button" id="btnDongY"
+                   value="Đồng ý"
+                   onclick="hienThi()">
+                   </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <div id="nhan"></div>
+        </td>
+    </tr>
+</table>
+</form>
+<script>
+function hienThi()
+{
+    document.getElementById("nhan").innerText =
+    "Bạn đã đăng ký thành công!!!";
+}
+</script>
+</body>
+</html>

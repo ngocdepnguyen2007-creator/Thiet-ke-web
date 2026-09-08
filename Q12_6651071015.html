@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <title>Tạo form và các điều khiển trên form</title>
+</head>
+<body>
+<form id="form1">
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <td>Họ và tên</td>
+        <td>
+            <input type="text" id="txtHoTen" size="30">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Địa chỉ</td>
+        <td>
+            <input type="text" id="txtDiaChi" size="30">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Điện thoại</td>
+        <td>
+            <input type="text" id="txtDienThoai" size="20">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Phái</td>
+        <td>
+            <input type="radio" name="phai" id="nam" value="Nam" checked>
+            Nam
+            <input type="radio" name="phai" id="nu" value="Nữ">
+            Nữ
+        </td>
+    </tr>
+
+    <tr>
+        <td>Nghề nghiệp</td>
+        <td>
+            <select id="ngheNghiep">
+                <option value="Bác sĩ">Bác sĩ</option>
+                <option value="Kỹ sư">Kỹ sư</option>
+                <option value="Giáo viên">Giáo viên</option>
+                <option value="Khác">Khác</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Chọn sản phẩm tham gia</td>
+        <td>
+            <select id="sanPham" multiple size="4">
+                <option value="Kem đánh răng">Kem đánh răng</option>
+                <option value="Dầu gội">Dầu gội</option>
+                <option value="Dầu xả">Dầu xả</option>
+                <option value="Sữa tắm">Sữa tắm</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Số người dự đoán tham gia</td>
+        <td>
+            <input type="text" id="txtSoNguoi" value="250000">
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <input type="button" id="btnDongY"
+                   value="Đồng ý"
+                   onclick="hienThi()">
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <div id="nhan"></div>
+        </td>
+    </tr>
+
+</table>
+
+</form>
+
+<script>
+function hienThi()
+{
+    document.getElementById("nhan").innerText =
+    "Bạn đã đăng ký thành công!!!";
+}
+</script>
+
+</body>
+</html>

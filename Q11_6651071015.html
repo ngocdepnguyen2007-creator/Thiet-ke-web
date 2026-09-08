@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tạo form và các điều khiển trên form</title>
+</head>
+<body>
+<form id="form1">
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <td>Mã người dùng</td>
+        <td>
+            <input type="text" id="txtMa" value="ptnhung">
+        </td>
+    </tr>
+    <tr>
+        <td>Mật khẩu</td>
+        <td>
+            <input type="password" id="txtMatKhau" value="123456789">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="button" id="btnDongY"
+                   value="Đồng ý"
+                   onclick="hienThi()">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <div id="nhan"></div>
+        </td>
+    </tr>
+</table>
+</form>
+<script>
+function hienThi()
+{
+    document.getElementById("nhan").innerText =
+    document.getElementById("txtMa").value;
+}
+</script>
+</body>
+</html>
